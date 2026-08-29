@@ -13,6 +13,8 @@ export { MOBILITY, BLOCKS, SLOT_OPTIONS, SLOT_META, APP_VERSION };
 
 export const PROGRAM = PROGRAM_DATA;
 export const CLIENT_LABEL = "Daily PT · Joonatan";
+// Used to tag rows in the shared backup sheet. Must match the tab name.
+export const CLIENT_NAME = "Joonatan";
 
 // Prefix matters: localStorage is scoped per ORIGIN, not per path, so all
 // three apps on yellowg-dev.github.io share one bucket. The previous build

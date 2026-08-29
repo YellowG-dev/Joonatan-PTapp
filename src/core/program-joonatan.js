@@ -158,6 +158,10 @@ export const PROGRAM = {
   restSubtitle: "No strength scheduled today — mobility still applies",
   gentlerNote: "Deload week — cut sets ~40%, same intensity",
   deloadAnchor: null,
+  // UI flags. showDeloadToggle draws the weekly D column in the Calendar;
+  // usesHeartRate reveals the Max HR field in Settings.
+  showDeloadToggle: true,
+  usesHeartRate: false,
   tracking: {
     scales: [],
     numbers: [
