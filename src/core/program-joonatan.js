@@ -25,11 +25,11 @@ const PUSH = {
   cat: "strength",
   exercises: [
     { id: "ps-1", pattern: "horizontal-press", name: "Barbell Bench Press", presc: "4×6–10 · RPE 7–9", sets: 4 },
-    { id: "ps-2", pattern: "overhead-press", name: "Overhead Press (Barbell)", presc: "4×6–10 · RPE 7–9", sets: 4 },
+    { id: "ps-2", pattern: "overhead-press", name: "Barbell overhead press", presc: "4×6–10 · RPE 7–9", sets: 4 },
     { id: "ps-3", pattern: "incline-press", name: "Incline Dumbbell Press", presc: "3×8–12 · RPE 7–8", sets: 3 },
-    { id: "ps-4", pattern: "lateral-raise", name: "Lateral Raise", presc: "3×12–15 · RPE 8", sets: 3 },
-    { id: "ps-5", pattern: "triceps", name: "Triceps Pushdown", presc: "3×12–15 · RPE 8", sets: 3 },
-    { id: "ps-6", pattern: "anti-extension", name: "Ab Wheel Rollout (or Hollow Body Hold)", presc: "3×8–12 · RPE 7–8", sets: 3 },
+    { id: "ps-4", pattern: "lateral-raise", name: "Dumbbell lateral raise", presc: "3×12–15 · RPE 8", sets: 3 },
+    { id: "ps-5", pattern: "triceps", name: "Cable triceps pushdown", presc: "3×12–15 · RPE 8", sets: 3 },
+    { id: "ps-6", pattern: "anti-extension", name: "Ab wheel rollout", presc: "3×8–12 · RPE 7–8", sets: 3 },
   ],
 };
 
@@ -38,10 +38,10 @@ const PULL = {
   cat: "strength",
   exercises: [
     { id: "pl-1", pattern: "hinge", name: "Conventional Deadlift", presc: "4×5–8 · RPE 7–9", sets: 4 },
-    { id: "pl-2", pattern: "vertical-pull", name: "Pull-Up / Lat Pulldown", presc: "4×6–10 · RPE 7–9", sets: 4 },
-    { id: "pl-3", pattern: "horizontal-row", name: "Barbell Row", presc: "3×8–12 · RPE 7–8", sets: 3 },
+    { id: "pl-2", pattern: "vertical-pull", name: "Pull-up", presc: "4×6–10 · RPE 7–9", sets: 4 },
+    { id: "pl-3", pattern: "horizontal-row", name: "Barbell row", presc: "3×8–12 · RPE 7–8", sets: 3 },
     { id: "pl-4", pattern: "rear-delt", name: "Face Pull", presc: "3×12–15 · RPE 8", sets: 3 },
-    { id: "pl-5", pattern: "biceps", name: "Barbell or Dumbbell Curl", presc: "3×10–15 · RPE 8", sets: 3 },
+    { id: "pl-5", pattern: "biceps", name: "Ez-bar curl", presc: "3×10–15 · RPE 8", sets: 3 },
     { id: "pl-6", pattern: "anti-rotation", name: "Pallof Press", presc: "2×12–15/side · RPE 7", sets: 2 },
   ],
 };
@@ -53,9 +53,9 @@ const LEGS = {
     { id: "lg-1", pattern: "squat", name: "Back Squat", presc: "4×6–10 · RPE 7–9", sets: 4 },
     { id: "lg-2", pattern: "hinge", name: "Romanian Deadlift", presc: "3×8–12 · RPE 7–8", sets: 3 },
     { id: "lg-3", pattern: "unilateral-squat", name: "Bulgarian Split Squat", presc: "3×10–12/leg · RPE 7–8", sets: 3 },
-    { id: "lg-4", pattern: "hamstring-curl", name: "Leg Curl", presc: "3×10–15 · RPE 8", sets: 3 },
+    { id: "lg-4", pattern: "hamstring-curl", name: "Machine leg curl", presc: "3×10–15 · RPE 8", sets: 3 },
     { id: "lg-5", pattern: "calf", name: "Standing Calf Raise", presc: "3×12–15 · RPE 8", sets: 3 },
-    { id: "lg-6", pattern: "trunk-flexion", name: "Hanging Leg Raise", presc: "3×10–15 · RPE 8", sets: 3 },
+    { id: "lg-6", pattern: "trunk-flexion", name: "Hanging knee raise", presc: "3×10–15 · RPE 8", sets: 3 },
   ],
 };
 
@@ -63,11 +63,11 @@ const FULL = {
   label: "Full Body — Second Exposure",
   cat: "strength",
   exercises: [
-    { id: "fb-1", pattern: "squat", name: "Front Squat (or Goblet Squat)", presc: "3×8–10 · RPE 7–8", sets: 3 },
+    { id: "fb-1", pattern: "squat", name: "Front or goblet squat", presc: "3×8–10 · RPE 7–8", sets: 3 },
     { id: "fb-2", pattern: "incline-press", name: "Incline Dumbbell Press", presc: "3×8–12 · RPE 7–8", sets: 3 },
     { id: "fb-3", pattern: "horizontal-row", name: "Seated Cable Row", presc: "3×10–12 · RPE 7–8", sets: 3 },
     { id: "fb-4", pattern: "hip-thrust", name: "Barbell Hip Thrust", presc: "3×10–12 · RPE 7–8", sets: 3 },
-    { id: "fb-5", pattern: "lateral-raise", name: "Lateral Raise", presc: "3×12–15 · RPE 8", sets: 3 },
+    { id: "fb-5", pattern: "lateral-raise", name: "Dumbbell lateral raise", presc: "3×12–15 · RPE 8", sets: 3 },
     { id: "fb-6", pattern: "lateral-core", name: "Side Plank", presc: "3×30–45s/side · RPE 7–8", sets: 3 },
   ],
 };
