@@ -5,6 +5,7 @@
  * Theme kept as the original dark amber/teal so the app looks the same to him
  * as it did before the rebuild.
  */
+import { THEMES, buildTheme } from "./core/themes.js";
 import React from "react";
 import { Dumbbell, Wind, Scale, Footprints, Flame } from "lucide-react";
 import PROGRAM_DATA, { MOBILITY, BLOCKS, SLOT_OPTIONS, SLOT_META, APP_VERSION } from "./core/program-joonatan.js";
@@ -33,33 +34,27 @@ export const BACKUP_URL = "";
 export const SUPABASE_URL = "https://qpkdqyazdzhoohowkouy.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_VCvYuYUAC9Dnf3kiLNB93g_tP_5c473";
 
-const ACCENT = "#E3A23C";   // amber
-const ACCENT_2 = "#4CB6C4"; // teal
+const { ACCENT, ACCENT_2 } = THEMES["amber-slate"];
 
-export const THEME = {
-  BG: "#10131A",
-  CARD: "#1A1F29",
-  BORDER: "#2A3140",
-  TEXT_PRIMARY: "#EEF0F3",
-  TEXT_SECONDARY: "#8891A3",
-  TEXT_MUTED: "#5C6577",
-  ACCENT,
-  ACCENT_2,
-  HEAT_RGB: "111,207,151",
-  FONT_DISPLAY: "'Space Grotesk', system-ui, sans-serif",
-  FONT_BODY: "'IBM Plex Sans', system-ui, sans-serif",
-  FONT_MONO: "'IBM Plex Mono', ui-monospace, monospace",
-  FONT_IMPORT:
-    "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
-  CATS: {
-    strength: { label: "Strength", color: ACCENT, Icon: Dumbbell },
-    mobility: { label: "Mobility", color: "#7FB88F", Icon: Wind },
-    check: { label: "Check", color: "#8891A3", Icon: Scale },
-    rest: { label: "Rest", color: "#8891A3", Icon: Scale },
-    activity: { label: "Activity", color: "#9C8CF0", Icon: Footprints },
-    yoga: { label: "Yoga", color: "#9C8CF0", Icon: Flame },
-  },
+// Which theme this client opens with. Every palette now lives in
+// core/themes.js, shared byte-identically by all three repos; this file keeps
+// only what is genuinely per-client.
+export const DEFAULT_THEME_ID = "amber-slate";
+
+// Categories are CLIENT data, not theme data. The three apps do not have the
+// same ones, or even the same number of them, so a theme cannot own this list
+// without carrying categories the other apps never show.
+// The theme supplies colours; this file decides which categories exist.
+const CATS = {
+  strength: { label: "Strength", color: ACCENT, Icon: Dumbbell },
+  mobility: { label: "Mobility", color: "#7FB88F", Icon: Wind },
+  check: { label: "Check", color: "#8891A3", Icon: Scale },
+  rest: { label: "Rest", color: "#8891A3", Icon: Scale },
+  activity: { label: "Activity", color: "#9C8CF0", Icon: Footprints },
+  yoga: { label: "Yoga", color: "#9C8CF0", Icon: Flame },
 };
+
+export const THEME = buildTheme(DEFAULT_THEME_ID, CATS);
 
 /* ------------------------------ Program tab ------------------------------- */
 
