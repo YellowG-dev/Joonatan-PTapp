@@ -86,11 +86,14 @@ export function ProgramView({ Section, ExerciseList, theme }) {
         </p>
       </Section>
 
-      {["push", "pull", "legs", "full"].map((k) => (
-        <Section key={k} title={BLOCKS.strength[k].label} color={A}>
-          <ExerciseList exercises={BLOCKS.strength[k].exercises} color={A} />
-        </Section>
-      ))}
+      {["push", "pull", "legs", "full"].map((k) => {
+        const blk = BLOCKS.strength?.[k];
+        return blk && (
+          <Section key={k} title={blk.label} color={A}>
+            <ExerciseList exercises={blk.exercises || []} color={A} />
+          </Section>
+        );
+      })}
 
       <Section title="Progression" subtitle="Double progression" color={A}>
         <div className="text-xs space-y-2">
@@ -113,7 +116,7 @@ export function ProgramView({ Section, ExerciseList, theme }) {
       </Section>
 
       <Section title="Daily mobility" subtitle="~10 min" color="#7FB88F">
-        <ExerciseList exercises={MOBILITY} color="#7FB88F" />
+        <ExerciseList exercises={MOBILITY || []} color="#7FB88F" />
       </Section>
 
       <Section title="What gets tracked" color={theme.CATS.check.color}>
