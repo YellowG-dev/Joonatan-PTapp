@@ -593,9 +593,6 @@
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
-  .pr-1 {
-    padding-right: var(--spacing);
-  }
   .pb-1 {
     padding-bottom: var(--spacing);
   }
