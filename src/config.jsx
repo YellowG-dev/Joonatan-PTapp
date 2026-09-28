@@ -110,8 +110,9 @@ export function ProgramView({ Section, ExerciseList, theme }) {
 
       <Section title="Deload" color={theme.ACCENT_2}>
         <p className="text-xs">
-          The switch in Settings trims volume by roughly 40% while keeping the weight the same. Roughly every fourth
-          week, or whenever sleep and energy have been poor for a stretch.
+          The deload toggle on the Calendar week removes one set per exercise — about a quarter to a third of the
+          volume — while keeping the weight the same. Roughly every fourth week, or whenever sleep and energy have
+          been poor for a stretch.
         </p>
       </Section>
 
