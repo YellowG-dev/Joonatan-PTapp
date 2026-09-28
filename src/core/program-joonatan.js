@@ -7,14 +7,14 @@
  *
  * Differences from Henna, which is why the engine had to grow:
  *   - tracks bodyweight (kg) and sleep (hours) as measured numbers
- *   - deload is a manual toggle, trimming volume ~40%
+ *   - deload is a manual toggle, trimming one set per exercise (−25 to −33%)
  *   - four training days rather than three
  *   - nutrition and testing were already switched off in his app
  */
 
 export const PROGRAM_ID = "joonatan";
 export const CLIENT_NAME = "Joonatan";
-export const APP_VERSION = "5.5.1-beta1";
+export const APP_VERSION = "5.5.2-beta1";
 
 export const SLOTS = ["strength"];
 
@@ -164,7 +164,7 @@ export const PROGRAM = {
   daily: DAILY,
   restLabel: "Rest Day",
   restSubtitle: "No strength scheduled today — mobility still applies",
-  gentlerNote: "Deload week — cut sets ~40%, same intensity",
+  gentlerNote: "Deload week — one set fewer per exercise (about −25 to −33%), same weights",
   deloadAnchor: null,
   // UI flags. showDeloadToggle draws the weekly D column in the Calendar;
   // usesHeartRate reveals the Max HR field in Settings.
