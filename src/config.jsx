@@ -6,6 +6,7 @@
  * as it did before the rebuild.
  */
 import { THEMES, buildTheme } from "./core/themes.js";
+import { standardCats } from "./core/categories.jsx";
 import React from "react";
 import { Dumbbell, Wind, Scale, Footprints, Flame } from "lucide-react";
 import PROGRAM_DATA, { MOBILITY, BLOCKS, SLOT_OPTIONS, SLOT_META, APP_VERSION } from "./core/program-joonatan.js";
@@ -47,7 +48,10 @@ export const DEFAULT_THEME_ID = "amber-slate";
 // so switching theme recolours it along with everything else. A category with a
 // fixed hex keeps that colour in every theme.
 function catsFor({ ACCENT, ACCENT_2 }) {
-  return {
+  // Every entry below wins; standardCats() only fills the categories this client
+  // never defined (a slot added later, such as Walk or Swim), so no existing
+  // colour or icon changes.
+  const own = {
     strength: { label: "Strength", color: ACCENT, Icon: Dumbbell },
     mobility: { label: "Mobility", color: "#7FB88F", Icon: Wind },
     check: { label: "Check", color: "#8891A3", Icon: Scale },
@@ -55,6 +59,7 @@ function catsFor({ ACCENT, ACCENT_2 }) {
     activity: { label: "Activity", color: "#9C8CF0", Icon: Footprints },
     yoga: { label: "Yoga", color: "#9C8CF0", Icon: Flame },
   };
+  return { ...standardCats({ ACCENT, ACCENT_2 }), ...own };
 }
 
 /** Everything app.jsx needs for one theme, carrying this client's categories. */
