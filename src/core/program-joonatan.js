@@ -14,7 +14,7 @@
 
 export const PROGRAM_ID = "joonatan";
 export const CLIENT_NAME = "Joonatan";
-export const APP_VERSION = "5.9.4-beta1";
+export const APP_VERSION = "5.9.5-beta1";
 
 export const SLOTS = ["strength"];
 
